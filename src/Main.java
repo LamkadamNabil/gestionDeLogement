@@ -6,6 +6,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    private static Object ArrayList;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("assets/views/sample.fxml"));
