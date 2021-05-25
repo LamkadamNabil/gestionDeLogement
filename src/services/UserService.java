@@ -1,9 +1,12 @@
 package services;
 
 import models.User;
-
 import java.sql.*;
 import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 
 public class UserService {
 
@@ -41,15 +44,14 @@ public class UserService {
         return null;
     }
 
-    public static boolean addUser(User user) {
+    public static boolean addUser(User user ) {
         try {
             Connection connection = DBConnection.getDBConnection();
-            String sql = "insert into user values (?, ?, ?, ? )";
+            String sql = "insert into user(email, password, user_role) values (?, ?, ? )";
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setInt(1, user.getId());
-            ps.setString(2, user.getEmail());
-            ps.setString(3, user.getPassword());
-            ps.setString(4, user.getRole());
+            ps.setString(1, user.getEmail());
+            ps.setString(2, user.getPassword());
+            ps.setString(3, user.getRole());
             int i = ps.executeUpdate();
             while (i > 0) {
                 return true;
