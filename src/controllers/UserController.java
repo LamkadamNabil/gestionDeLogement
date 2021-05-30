@@ -4,7 +4,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Label;
-import services.UserService;
+
+
+
+import java.sql.SQLException;
+
+
 
 public  class UserController {
 
@@ -15,13 +20,7 @@ public  class UserController {
     private Label lbl1;
 
     @FXML
-    void showuser(MouseEvent event) {
-            getuser();
-    }
+    void showuser(MouseEvent event) throws SQLException {
 
-    public void getuser(){
-        String email = UserService.findUserbyID();
-        lbl1.setText(email);
     }
-
 }
