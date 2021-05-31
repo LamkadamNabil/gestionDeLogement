@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="jfoenix-8.0.5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Program Files/Java/jfoenix-8.0.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Program Files/Java/jfoenix-8.0.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Program Files/Java/jfoenix-9.0.10.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../Program Files/Java" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../Program Files/Java" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../Program Files/Java" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../Program Files/Java" recursive="false" type="SOURCES" />
+  </library>
+</component>

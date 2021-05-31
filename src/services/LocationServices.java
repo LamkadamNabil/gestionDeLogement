@@ -22,40 +22,40 @@ public class LocationServices {
         try {
 
             pst = connection.prepareStatement(sql);
-            pst.setLong(1,obj.getId_locataire());
-            pst.setLong(2,obj.getId_logement());
+            pst.setInt(1,obj.getId_locataire());
+            pst.setInt(2,obj.getId_logement());
             pst.setFloat(3,obj.getPrix());
             pst.setString(4,obj.getDuree());
-            System.out.println("succes query ");
+           // System.out.println("succes query ");
             pst.executeUpdate();
         }catch(SQLException e)
         {
             System.out.println(e.getMessage());
         }
     }
-    public void delete(long id) {
+    public void delete(int id) {
         PreparedStatement pst =null;
         String sql="delete from location  where Id_locataire=?";
         try {
 
             pst = connection.prepareStatement(sql);
-            pst.setLong(1,id);
-            System.out.println("succes query ");
+            pst.setInt(1,id);
+    //        System.out.println("succes query ");
             pst.executeUpdate();
         }catch(SQLException e)
         {
             System.out.println(e.getMessage());
         }
     }
-    public Location findLocationByIdlocataire(long id) {
+    public Location findLocationByIdlocataire(int id) {
         PreparedStatement pst =null;
         ResultSet rs;
         String sql="select * from location  where Id_locataire=?";
         try {
 
             pst = connection.prepareStatement(sql);
-            pst.setLong(1,id);
-            System.out.println("succes query ");
+            pst.setInt(1,id);
+           // System.out.println("succes query ");
             rs =pst.executeQuery();
             if (rs.next()){
                 //System.out.println(rs.getInt("id_locataire")+" " + rs.getString("id_logement")+" " + rs.getString("prix"));
@@ -68,15 +68,15 @@ public class LocationServices {
         }
         return null;
     }
-    public Location findLocationByidlogement(long id) {
+    public Location findLocationByidlogement(int id) {
         PreparedStatement pst =null;
         ResultSet rs;
         String sql="select * from location  where id_logement=?";
         try {
 
             pst = connection.prepareStatement(sql);
-            pst.setLong(1,id);
-            System.out.println("succes query ");
+            pst.setInt(1,id);
+           // System.out.println("succes query ");
             rs =pst.executeQuery();
             if (rs.next()){
                 //System.out.println(rs.getInt("id_locataire")+" " + rs.getString("id_logement")+" " + rs.getString("prix"));
@@ -97,7 +97,7 @@ public class LocationServices {
         try {
 
             pst = connection.prepareStatement(sql);
-            System.out.println("succes query ");
+           // System.out.println("succes query ");
             rs =pst.executeQuery();
             while (rs.next()){
                 //System.out.println(rs.getInt("id_locataire")+" " + rs.getString("id_logement")+" " + rs.getString("prix"));

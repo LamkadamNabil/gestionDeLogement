@@ -27,8 +27,8 @@ public class ImageServices {
         try {
 
             pst = connection.prepareStatement(sql);
-            pst.setLong(1,obj.getId());
-            pst.setLong(2,obj.getId_logement());
+            pst.setInt(1,obj.getId());
+            pst.setInt(2,obj.getId_logement());
             pst.setString(3, String.valueOf(obj.getImages()));
 
             System.out.println("succes query add to Image");
@@ -38,17 +38,17 @@ public class ImageServices {
             System.out.println(e.getMessage());
         }
     }
-    public boolean deleteImage(int id) {
+    public boolean deleteImage(int id) throws SQLException {
         PreparedStatement pst =null;
         String sql="delete from image  where Id=?";
         try {
 
             pst = connection.prepareStatement(sql);
             pst.setInt(1,id);
-            System.out.println("delete with succes ");
+           // System.out.println("delete with succes ");
             int satusdelete=pst.executeUpdate();
-            if(satusdelete>0)
-            {System.out.println("delete with succes ");
+            if(satusdelete>0){
+            //{System.out.println("delete with succes ");
                 return true;
             }else {
                 System.out.println("error delete ");
@@ -69,7 +69,7 @@ public class ImageServices {
 
             pst = connection.prepareStatement(sql);
             pst.setInt(1,id);
-            System.out.println("succes query getOne");
+          //  System.out.println("succes query getOne");
             rs =pst.executeQuery();
             if (rs.next()){
                 //System.out.println(rs.getInt("id_locataire")+" " + rs.getString("id_logement")+" " + rs.getString("prix"));
@@ -88,7 +88,6 @@ public class ImageServices {
         ResultSet rs;
         String sql="select * from  image where Id_logement=?";
         try {
-
             pst = connection.prepareStatement(sql);
             pst.setInt(1,id);
             System.out.println("succes query ");

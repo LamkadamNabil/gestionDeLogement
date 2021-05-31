@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="705.0" styleClass="buttons" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="27.0" layoutY="34.0" stylesheets="@../../css/Admin/Application.css" text="Rechercher">
+            <font>
+                <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+            </font>
+        </Label>
+        <JFXTextField layoutX="129.0" layoutY="33.0" prefHeight="25.0" prefWidth="182.0" promptText="identifiant" />
+        <FontAwesomeIconView glyphName="SEARCH" layoutX="328.0" layoutY="51.0" size="14.0" wrappingWidth="12.000000551342964" />
+        <JFXTextField layoutX="14.0" layoutY="103.0" prefHeight="25.0" prefWidth="182.0" text="name" />
+        <JFXTextField layoutX="13.0" layoutY="166.0" prefHeight="25.0" prefWidth="182.0" promptText="superficie" text="CIN" />
+        <JFXTextField layoutX="237.0" layoutY="166.0" prefHeight="25.0" prefWidth="182.0" promptText="loyer" text="Numero telephone" />
+      <AnchorPane layoutX="74.0" layoutY="254.0" prefHeight="121.0" prefWidth="104.0" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="527.0" />
+        <JFXButton layoutX="220.0" layoutY="561.0" styleClass="buttons" stylesheets="@../../css/Admin/Application.css" text="Ajouter" />
+        <JFXButton layoutX="293.0" layoutY="561.0" styleClass="buttons" stylesheets="@../../css/Admin/Application.css" text="MODIFIER" />
+        <JFXButton layoutX="368.0" layoutY="561.0" styleClass="buttons" stylesheets="@../../css/Admin/Application.css" text="SUPPRIMER" />
+      <DatePicker layoutX="231.0" layoutY="116.0" prefHeight="25.0" prefWidth="194.0" />
+    </children>
+</AnchorPane>
